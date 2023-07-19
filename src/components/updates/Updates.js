@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-type Props = {};
+
 const updates = [
   {
     id: 1,
@@ -48,12 +48,15 @@ const updates = [
     imageSrc: "/bills.jpg",
   },
 ];
-const Updates = (props: Props) => {
+const Updates = () => {
   return (
     <>
       {updates.map((update) => {
         return (
-          <div className="w-full h-[300px] hover:backdrop-40 hover:opacity-70 hover:bg-gray-800 cursor-pointer flex flex-col  bg-gray-900">
+          <div
+            key={update.id}
+            className="md:w-full h-[300px] w-[350px]  hover:backdrop-40 hover:opacity-70 dark:hover:bg-gray-800 hover:bg-gray-200 cursor-pointer flex flex-col  dark:bg-gray-900 bg-gray-300"
+          >
             <div>
               <Image
                 height={400}

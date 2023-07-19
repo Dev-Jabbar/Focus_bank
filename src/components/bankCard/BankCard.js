@@ -1,10 +1,12 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import {
   ClipboardDocumentIcon,
-  ClipboardDocumentCheckIcon,
+  CheckIcon,
   EyeSlashIcon,
   EyeIcon,
 } from "@heroicons/react/24/solid";
+import Link from "next/link";
 
 const Cards = [
   {
@@ -50,23 +52,40 @@ const CommonCardFeatures = {
   button1: "Fund Account",
   button2: "Transaction History",
 };
-type Props = {};
 
-const BankCard = (props: Props) => {
+const BankCard = () => {
+  const [copiedCardId, setCopiedCardId] = useState(null);
+  const [AccBal, setAccBal] = useState(true);
+
+  const handleCopyClick = (text, cardId) => {
+    navigator.clipboard.writeText(text);
+    setCopiedCardId(cardId);
+    setTimeout(() => setCopiedCardId(null), 2000);
+  };
+
   return (
     <>
       {Cards.map((card) => {
+        const isCopied = copiedCardId === card.id;
         return (
           <div
-            className={`flex flex-col ${card.text} mr-4 justify-between pb-4 pr-4 p-2 ${card.bg} h-[230px] rounded-lg w-[480px] mt-2`}
+            key={card.id}
+            className={`flex flex-col ${card.text} mr-4 justify-between pb-4 pr-4 p-2 ${card.bg} h-[230px] rounded-lg md:w-[480px] w-[340px] mt-2`}
           >
             <div className="flex justify-between">
               <div className="flex flex-col space-x-1 items-baseline ">
                 <div className="opacity-80 tracking-tighter">Balance</div>
-                <div className="flex gap-2 items-center font-bold text-lg">
-                  <span>{card.Balance}</span>
-                  <span>
-                    <EyeSlashIcon className="w-5 h-5" />
+                <div className="flex gap-2 items-center font-bold text-lg ">
+                  <span>{AccBal ? card.Balance : "$*****"}</span>
+                  <span
+                    className="cursor-pointer"
+                    onClick={() => setAccBal(!AccBal)}
+                  >
+                    {AccBal ? (
+                      <EyeSlashIcon className="w-5 h-5 " />
+                    ) : (
+                      <EyeIcon className="w-5 h-5 " />
+                    )}
                   </span>
                 </div>
               </div>
@@ -82,8 +101,15 @@ const BankCard = (props: Props) => {
                 </div>
                 <div className=" flex gap-2 font-semibold">
                   <span>{card.Account}</span>
-                  <span>
-                    <ClipboardDocumentIcon className="w-5 h-5" />
+                  <span
+                    className="cursor-pointer"
+                    onClick={() => handleCopyClick(card.Account, card.id)}
+                  >
+                    {isCopied ? (
+                      <CheckIcon className="w-5 h-5 text-green-700" />
+                    ) : (
+                      <ClipboardDocumentIcon className="w-5 h-5 " />
+                    )}
                   </span>
                 </div>
               </div>
@@ -93,13 +119,16 @@ const BankCard = (props: Props) => {
               </div>
             </div>
             <div className="flex justify-between">
-              <button className={`${card.buttonColor} p-2 font-bold`}>
-                {CommonCardFeatures.button1}
-              </button>
-
-              <button className={`${card.buttonColor} p-2 font-bold`}>
-                {CommonCardFeatures.button2}
-              </button>
+              <Link href="/home/blank/payments-page/fundAccount">
+                <button className={`${card.buttonColor} p-2 font-bold`}>
+                  {CommonCardFeatures.button1}
+                </button>
+              </Link>
+              <Link href="/home/blank/transaction-history-page">
+                <button className={`${card.buttonColor} p-2 font-bold`}>
+                  {CommonCardFeatures.button2}
+                </button>
+              </Link>
             </div>
           </div>
         );
