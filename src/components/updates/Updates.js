@@ -55,7 +55,7 @@ const Updates = () => {
         return (
           <div
             key={update.id}
-            className="md:w-full h-[300px] w-[350px]  hover:backdrop-40 hover:opacity-70 dark:hover:bg-gray-800 hover:bg-gray-200 cursor-pointer flex flex-col  dark:bg-gray-900 bg-gray-300"
+            className="md:w-full h-[300px] w-[300px]  hover:backdrop-40 hover:opacity-70 dark:hover:bg-gray-800 hover:bg-gray-200 cursor-pointer flex flex-col  dark:bg-gray-900 bg-gray-300"
           >
             <div>
               <Image

@@ -38,21 +38,21 @@ const Register = () => {
           onSubmit={handleSubmit}
         >
           <input
-            className="h-10 text-black text-center"
+            className="h-10 text-center"
             type="text"
             placeholder="Username"
             required
             onChange={(e) => setName(e.target.value)}
           />
           <input
-            className="h-10 text-black text-center"
+            className="h-10  text-center"
             type="text"
             placeholder="Email"
             required
             onChange={(e) => setEmail(e.target.value)}
           />
           <input
-            className="h-10 text-black text-center"
+            className="h-10  text-center"
             type="password"
             placeholder="Password"
             required

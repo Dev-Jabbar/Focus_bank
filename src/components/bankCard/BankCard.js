@@ -70,11 +70,13 @@ const BankCard = () => {
         return (
           <div
             key={card.id}
-            className={`flex flex-col ${card.text} mr-4 justify-between pb-4 pr-4 p-2 ${card.bg} h-[230px] rounded-lg md:w-[480px] w-[340px] mt-2`}
+            className={`flex flex-col ${card.text} mr-4 justify-between pb-4 pr-4 p-2 ${card.bg} h-[230px] rounded-lg md:w-[480px] w-[300px] mt-2`}
           >
             <div className="flex justify-between">
               <div className="flex flex-col space-x-1 items-baseline ">
-                <div className="opacity-80 tracking-tighter">Balance</div>
+                <div className="opacity-80 md:text-md text-sm tracking-tighter">
+                  Balance
+                </div>
                 <div className="flex gap-2 items-center font-bold text-lg ">
                   <span>{AccBal ? card.Balance : "$*****"}</span>
                   <span
@@ -89,17 +91,19 @@ const BankCard = () => {
                   </span>
                 </div>
               </div>
-              <div className="flex flex-col space-x-1 items-baseline ">
+              <div className="flex flex-col space-x-1 items-baseline md:text-md text-sm ">
                 <div>Status</div>
-                <div className="v font-bold ">{card.status}</div>
+                <div className="v font-bold md:text-md text-sm ">
+                  {card.status}
+                </div>
               </div>
             </div>
             <div className="flex justify-between">
               <div className="flex flex-col space-x-1 items-baseline ">
-                <div className="opacity-80 tracking-tighter">
+                <div className="opacity-80 text-sm md:text-md tracking-tighter">
                   Account Number
                 </div>
-                <div className=" flex gap-2 font-semibold">
+                <div className=" flex gap-2 md:text-sm font-semibold">
                   <span>{card.Account}</span>
                   <span
                     className="cursor-pointer"
@@ -115,17 +119,23 @@ const BankCard = () => {
               </div>
               <div className="flex flex-col space-x-1 items-end">
                 <div>Type</div>
-                <div className="b text-md font-semibold">{card.Type}</div>
+                <div className=" text-md text-sm font-semibold">
+                  {card.Type}
+                </div>
               </div>
             </div>
             <div className="flex justify-between">
               <Link href="/home/blank/payments-page/fundAccount">
-                <button className={`${card.buttonColor} p-2 font-bold`}>
+                <button
+                  className={`${card.buttonColor} p-2 text-sm md:text-md font-bold`}
+                >
                   {CommonCardFeatures.button1}
                 </button>
               </Link>
               <Link href="/home/blank/transaction-history-page">
-                <button className={`${card.buttonColor} p-2 font-bold`}>
+                <button
+                  className={`${card.buttonColor} p-2 text-sm md:text-md font-bold`}
+                >
                   {CommonCardFeatures.button2}
                 </button>
               </Link>
