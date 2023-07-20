@@ -29,7 +29,7 @@ const Register = () => {
     }
   };
   return (
-    <div className="md:flex md:flex-row flex flex-col-reverse   dark:bg-black bg-black dark:text-white text-white   md:justify-center md:space-x-[200px] md:items-center w-screen h-screen justify-center items-center ">
+    <div className="md:flex md:flex-row flex flex-col-reverse   dark:bg-black bg-black  dark:text-white text-white   md:justify-center md:space-x-[200px] md:items-center w-screen h-screen justify-center items-center ">
       <div className="flex flex-col space-y-5 justify-center  items-center">
         <h1 className="font-bold text-lg">Create an Account</h1>
         <h2>Please sign up to access focus bank.</h2>
@@ -38,21 +38,21 @@ const Register = () => {
           onSubmit={handleSubmit}
         >
           <input
-            className="h-10 text-center"
+            className="h-10 bg-gray-900 dark:bg-gray-900 text-white dark:text-white text-center"
             type="text"
             placeholder="Username"
             required
             onChange={(e) => setName(e.target.value)}
           />
           <input
-            className="h-10  text-center"
+            className="h-10 bg-gray-900 dark:bg-gray-900 text-white dark:text-white text-center"
             type="text"
             placeholder="Email"
             required
             onChange={(e) => setEmail(e.target.value)}
           />
           <input
-            className="h-10  text-center"
+            className="h-10 bg-gray-900 dark:bg-gray-900 text-white dark:text-white text-center"
             type="password"
             placeholder="Password"
             required
@@ -74,7 +74,7 @@ const Register = () => {
       <div>
         <Image
           className="spin-slow w-40 h-40 md:w-[250px] md:h-[250px]  rounded-full object-cover"
-          src="/focus.png "
+          src="/focus.jpg "
           width={400}
           height={400}
           alt="focus_bank logo"

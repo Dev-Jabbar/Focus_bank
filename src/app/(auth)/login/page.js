@@ -25,7 +25,7 @@ const Login = () => {
 
   console.log(session);
   return (
-    <div className="md:flex md:flex-row flex flex-col-reverse dark:text-white  bg-black  text-white   md:justify-center md:space-x-[200px] md:items-center w-screen h-screen justify-center items-center ">
+    <div className="md:flex md:flex-row flex flex-col-reverse dark:text-white bg-black  dark:bg-black  text-white   md:justify-center md:space-x-[200px] md:items-center w-screen h-screen justify-center items-center ">
       <div className="flex flex-col space-y-5 justify-center  items-center">
         <h1 className="font-bold text-2xl text-gray-400 pb-10">
           Welcome to focus bank
@@ -36,14 +36,14 @@ const Login = () => {
           onSubmit={handleSubmit}
         >
           <input
-            className="h-10  text-center"
+            className="h-10 bg-gray-900 dark:bg-gray-900 text-white dark:text-white  text-center"
             type="text"
             placeholder="Email"
             required
             onChange={(e) => setEmail(e.target.value)}
           />
           <input
-            className="h-10  text-center"
+            className="h-10 bg-gray-900 dark:bg-gray-900 text-white dark:text-white text-center"
             type="password"
             placeholder="Password"
             required
@@ -78,7 +78,7 @@ const Login = () => {
       <div>
         <Image
           className="spin-slow w-40 h-40 md:w-[250px] md:h-[250px] md:mt-10 rounded-full object-cover"
-          src="/focus.png "
+          src="/focus.jpg"
           width={400}
           height={400}
           alt="focus_bank logo"

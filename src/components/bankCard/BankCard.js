@@ -119,7 +119,7 @@ const BankCard = () => {
               </div>
               <div className="flex flex-col space-x-1 items-end">
                 <div>Type</div>
-                <div className=" text-md text-sm font-semibold">
+                <div className=" text-md text-sm  text-end font-semibold">
                   {card.Type}
                 </div>
               </div>

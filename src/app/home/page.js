@@ -50,7 +50,7 @@ export default function Home() {
           <Updates />
         </div>
 
-        <div className="flex pl-6 relative md:hidden h-[300px] overflow-x-auto mb-[100px]">
+        <div className="flex pl-6 relative md:hidden md:h-[300px] h-[330px] overflow-x-auto mb-[100px]">
           <div className="   absolute flex  space-x-3 pr-6 ">
             <Updates />
           </div>
