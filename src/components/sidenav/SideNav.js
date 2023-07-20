@@ -89,7 +89,7 @@ const SideNav = () => {
             <div className="flex gap-2 items-center pl-6 justify-start cursor-pointer  ">
               <Image
                 className=""
-                src="/focus.jpg "
+                src="/focus.jpg"
                 width={50}
                 height={50}
                 alt="focus_bank logo"

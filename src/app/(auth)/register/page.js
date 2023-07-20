@@ -74,7 +74,7 @@ const Register = () => {
       <div>
         <Image
           className="spin-slow w-40 h-40 md:w-[250px] md:h-[250px]  rounded-full object-cover"
-          src="/focus.jpg "
+          src="/focus.jpg"
           width={400}
           height={400}
           alt="focus_bank logo"
