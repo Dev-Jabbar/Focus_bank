@@ -87,13 +87,13 @@ const LoginPage = () => {
             <div className="flex flex-col">
               <div>
                 <div
-                  className={`text-gray-400 flex justify-between mb-1 text-sm font-bold ${
+                  className={`dark:text-gray-400 text-black flex justify-between mb-1 text-sm font-bold ${
                     !usernameFocused && username.trim() === ""
                       ? "text-red-500"
                       : ""
                   }`}
                 >
-                  <div className="min-[2560px]:text-lg">
+                  <div className="min-[2560px]:text-lg ">
                     Username
                     {!usernameFocused && username.trim() === "" ? "*" : ""}
                   </div>
@@ -105,7 +105,7 @@ const LoginPage = () => {
                   </div>
                 </div>
                 <input
-                  className={`h-10 2xl:h-[50px] min-[2560px]:h-[70px] min-[2560px]:placeholder:text-lg bg-gray-900 w-full border-gray-700 border-[0.05px] rounded-md px-2 placeholder:text-sm dark:bg-gray-900 text-white ${
+                  className={`h-10 2xl:h-[50px] min-[2560px]:h-[70px] min-[2560px]:placeholder:text-lg bg-gray-500 w-full border-gray-700 border-[0.05px] rounded-md px-2 placeholder:text-sm  dark:bg-gray-900 dark:text-white ${
                     !usernameFocused && username.trim() == ""
                       ? "focus:border-red-500"
                       : "focus:border-blue-500"
@@ -126,7 +126,7 @@ const LoginPage = () => {
             <div>
               <div className="flex flex-col">
                 <div
-                  className={`text-gray-400 flex justify-between mb-1 2xl:mb-3 text-sm font-bold ${
+                  className={`dark:text-gray-400 text-black flex justify-between mb-1 2xl:mb-3 text-sm font-bold ${
                     !passwordFocused && password.trim() === ""
                       ? "text-red-500"
                       : ""
@@ -146,7 +146,7 @@ const LoginPage = () => {
 
                 <div className="relative ">
                   <input
-                    className={`h-10 2xl:h-[50px] min-[2560px]:h-[70px] min-[2560px]:placeholder:text-lg bg-gray-900 w-full border-gray-700 border-[0.05px] rounded-md px-2 placeholder:text-sm dark:bg-gray-900 text-white ${
+                    className={`h-10 2xl:h-[50px] min-[2560px]:h-[70px] min-[2560px]:placeholder:text-lg bg-gray-500 w-full border-gray-700 border-[0.05px] rounded-md px-2 placeholder:text-sm dark:bg-gray-900 dark:text-white ${
                       !passwordFocused && password.trim() == ""
                         ? "focus:border-red-500"
                         : "focus:border-blue-500"
@@ -213,13 +213,13 @@ const LoginPage = () => {
         </form>
         <div className="mt-10 2xl:mt-12 flex justify-between w-full px-6">
           <div className="w-full mr-2 border-b    border-gray-800" />
-          <div className="flex-shrink-0 text-gray-400 min-[2560px]:text-xl font-bold">
+          <div className="flex-shrink-0 dark:text-gray-400 min-[2560px]:text-xl font-bold">
             New user?
           </div>
           <div className="w-full ml-2 border-b border-gray-800" />
         </div>
         <div className="px-6 mt-10 2xl:mt-12">
-          <button className="bg-gray-900 hover:bg-gray-800  min-[2560px]:h-[60px] min-[2560px]:text-xl w-full h-10 rounded-md text-blue-800 text-center">
+          <button className="dark:bg-gray-900 bg-gray-600 hover:dark:bg-gray-800 hover:bg-gray-700  min-[2560px]:h-[60px] min-[2560px]:text-xl w-full h-10 rounded-md dark:text-blue-800  text-center">
             Sign up
           </button>
         </div>

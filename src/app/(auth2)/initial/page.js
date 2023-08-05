@@ -4,7 +4,7 @@ import React from "react";
 
 const InitialPage = () => {
   return (
-    <div className="md:h-screen w-screen pt-6 md:pt-0 flex px-4 md:px-8 lg:px-0 overflow-y-scroll items-center justify-center flex-col">
+    <div className="md:h-screen  w-screen pt-6 md:pt-0 flex px-4 md:px-8 lg:px-0 overflow-y-scroll items-center justify-center flex-col">
       <div>
         <div className="md:h-[60px] h-[40px] w-[40px] md:w-[60px]  min-[2560px]:h-[150px] min-[2560px]:w-[150px]">
           <Image
@@ -21,7 +21,7 @@ const InitialPage = () => {
           <h1 className="font-extrabold md:text-4xl min-[2560px]:text-6xl">
             Welcome to Focus Bank
           </h1>
-          <p className="pt-1 text-gray-400 min-[2560px]:text-3xl text-center md:text-start">
+          <p className="pt-1 dark:text-gray-400 text-gray-500 min-[2560px]:text-3xl text-center md:text-start">
             Making your banking experience an enjoyable one
           </p>
 
