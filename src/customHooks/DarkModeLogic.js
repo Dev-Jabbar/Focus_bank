@@ -27,14 +27,14 @@ const useDarkModeLogic = () => {
     if (currentTheme === "dark") {
       return (
         <SunIcon
-          className="w-5 h-5 mr-2 text-white  cursor-pointer  hover:animate-spin z-20 "
+          className="w-5 h-5 min-[2560px]:h-8 min-[2560px]:w-8 mr-2 text-white  cursor-pointer  hover:animate-spin z-20 "
           onClick={() => setTheme("light")}
         />
       );
     } else {
       return (
         <MoonIcon
-          className="w-5 h-5 mr-2  text-white cursor-pointer hover:animate-spin-slow z-20 "
+          className="w-5 h-5 min-[2560px]:h-8 min-[2560px]:w-8 mr-2  text-white cursor-pointer hover:animate-spin-slow z-20 "
           onClick={() => setTheme("dark")}
         />
       );

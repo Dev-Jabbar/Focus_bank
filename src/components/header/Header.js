@@ -17,12 +17,12 @@ const Header = () => {
 
   const ModalText = "Notifications";
   return (
-    <div className=" bg-[#030d1f] md:h-[70px] h-[60px] text-white  flex px-4 justify-between items-center   bg-opacity-80 border-[0.1px] border-t-0 border-gray-600">
+    <div className=" bg-[#030d1f]  min-[2560px]:text-2xl md:h-[70px] min-[2560px]:h-[120px] h-[60px] text-white  flex px-4 justify-between items-center   bg-opacity-80 border-[0.1px] border-t-0 border-gray-600">
       <div
         className="w-9 h-9 rounded-full bg-black flex items-center  justify-center hover:bg-gray-800 cursor-pointer"
         onClick={handleOpenModal}
       >
-        <BellAlertIcon className="w-5 h-5" />
+        <BellAlertIcon className="w-5 h-5 min-[2560px]:h-8 min-[2560px]:w-8" />
       </div>
       {isModalOpen && (
         <CustomModal
@@ -31,7 +31,7 @@ const Header = () => {
           ModalText={ModalText}
         />
       )}
-      <div>{FocusHeaderTitle}</div>
+      <div className="min-[2560px]:text-3xl ">{FocusHeaderTitle}</div>
 
       {renderThemeChanger()}
     </div>

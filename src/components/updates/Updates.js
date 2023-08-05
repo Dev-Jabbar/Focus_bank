@@ -55,7 +55,7 @@ const Updates = () => {
         return (
           <div
             key={update.id}
-            className="md:w-full md:h-[300px] h-[330px] w-[300px]  hover:backdrop-40 hover:opacity-70 dark:hover:bg-gray-800 hover:bg-gray-200 cursor-pointer flex flex-col  dark:bg-gray-900 bg-gray-300"
+            className="md:w-full md:h-[300px] h-[330px] w-[300px] min-[2560px]:h-[500px]  hover:backdrop-40 hover:opacity-70 dark:hover:bg-gray-800 hover:bg-gray-200 cursor-pointer flex flex-col  dark:bg-gray-900 bg-gray-300"
           >
             <div>
               <Image
@@ -63,12 +63,16 @@ const Updates = () => {
                 width={300}
                 alt={update.imageAlt}
                 src={update.imageSrc}
-                className="w-full h-[220px]"
+                className="w-full h-[220px] min-[2560px]:h-[350px]"
               />
             </div>
-            <div className="flex flex-col gap-[0.5px] items-center pt-1 px-3">
-              <h1 className="text-lg font-bold">{update.heading}</h1>
-              <div className="text-sm">{update.content}</div>
+            <div className="flex flex-col gap-[0.5px] min-[2560px]:gap-1 min-[2560px]:pt-4 items-center pt-1 px-3">
+              <h1 className="text-lg min-[2560px]:text-2xl font-bold">
+                {update.heading}
+              </h1>
+              <div className="text-sm min-[2560px]:text-xl">
+                {update.content}
+              </div>
             </div>
           </div>
         );

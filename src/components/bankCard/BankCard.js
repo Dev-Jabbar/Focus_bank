@@ -70,56 +70,56 @@ const BankCard = () => {
         return (
           <div
             key={card.id}
-            className={`flex flex-col ${card.text} mr-4 justify-between pb-4 pr-4 p-2 ${card.bg} h-[230px] rounded-lg md:w-[480px] w-[300px] mt-2`}
+            className={`flex flex-col ${card.text}  mr-4 justify-between pb-4 pr-4 p-2 ${card.bg} h-[230px] rounded-lg md:w-[480px] min-[2560px]:w-[800px] min-[2560px]:h-[430px]  w-[300px] mt-2`}
           >
             <div className="flex justify-between">
               <div className="flex flex-col space-x-1 items-baseline ">
                 <div className="opacity-80 md:text-md text-sm tracking-tighter">
                   Balance
                 </div>
-                <div className="flex gap-2 items-center font-bold text-lg ">
+                <div className="flex gap-2 items-center font-bold text-lg  min-[2560px]:text-3xl ">
                   <span>{AccBal ? card.Balance : "$*****"}</span>
                   <span
                     className="cursor-pointer"
                     onClick={() => setAccBal(!AccBal)}
                   >
                     {AccBal ? (
-                      <EyeSlashIcon className="w-5 h-5 " />
+                      <EyeSlashIcon className="w-5 h-5  min-[2560px]:w-10  min-[2560px]:h-10" />
                     ) : (
-                      <EyeIcon className="w-5 h-5 " />
+                      <EyeIcon className="w-5 h-5  min-[2560px]:w-10  min-[2560px]:h-10" />
                     )}
                   </span>
                 </div>
               </div>
-              <div className="flex flex-col space-x-1 items-baseline md:text-md text-sm ">
+              <div className="flex flex-col space-x-1 items-baseline md:text-md text-sm  min-[2560px]:text-xl ">
                 <div>Status</div>
-                <div className="v font-bold md:text-md text-sm ">
+                <div className="v font-bold md:text-md text-sm  min-[2560px]:text-xl ">
                   {card.status}
                 </div>
               </div>
             </div>
             <div className="flex justify-between">
               <div className="flex flex-col space-x-1 items-baseline ">
-                <div className="opacity-80 text-sm md:text-md tracking-tighter">
+                <div className="opacity-80 text-sm md:text-md  min-[2560px]:text-2xl tracking-tighter">
                   Account Number
                 </div>
-                <div className=" flex gap-2 md:text-sm font-semibold">
+                <div className=" flex gap-2 md:text-sm  min-[2560px]:text-2xl font-semibold">
                   <span>{card.Account}</span>
                   <span
                     className="cursor-pointer"
                     onClick={() => handleCopyClick(card.Account, card.id)}
                   >
                     {isCopied ? (
-                      <CheckIcon className="w-5 h-5 text-green-700" />
+                      <CheckIcon className="w-5 h-5  min-[2560px]:w-10  min-[2560px]:h-10 text-green-700" />
                     ) : (
-                      <ClipboardDocumentIcon className="w-5 h-5 " />
+                      <ClipboardDocumentIcon className="w-5 h-5  min-[2560px]:w-10  min-[2560px]:h-10" />
                     )}
                   </span>
                 </div>
               </div>
               <div className="flex flex-col space-x-1 items-end">
-                <div>Type</div>
-                <div className=" text-md text-sm  text-end font-semibold">
+                <div className=" min-[2560px]:text-3xl">Type</div>
+                <div className=" text-md text-sm  min-[2560px]:text-2xl text-end font-semibold">
                   {card.Type}
                 </div>
               </div>
@@ -127,14 +127,14 @@ const BankCard = () => {
             <div className="flex justify-between">
               <Link href="/home/blank/payments-page/fundAccount">
                 <button
-                  className={`${card.buttonColor} p-2 text-sm md:text-md font-bold`}
+                  className={`${card.buttonColor} p-2 text-sm  min-[2560px]:text-2xl md:text-md font-bold`}
                 >
                   {CommonCardFeatures.button1}
                 </button>
               </Link>
               <Link href="/home/blank/transaction-history-page">
                 <button
-                  className={`${card.buttonColor} p-2 text-sm md:text-md font-bold`}
+                  className={`${card.buttonColor} p-2 text-sm  min-[2560px]:text-2xl md:text-md font-bold`}
                 >
                   {CommonCardFeatures.button2}
                 </button>

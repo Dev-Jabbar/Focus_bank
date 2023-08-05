@@ -12,28 +12,32 @@ export default function Home() {
   const { showFaveIcons2, setShowFaveIcons2 } = useContext(FocusContext);
 
   return (
-    <main className="flex flex-col overflow-y-auto scrollbar scrollbar-track-gray-800 scrollbar-thumb-[#030d1f]/80 scrollbar-thin   overflow-x-hidden dark:bg-black">
+    <main className="flex flex-col overflow-y-auto  scrollbar-track-gray-800 scrollbar-thumb-[#030d1f]/80 scrollbar-thin   overflow-x-hidden dark:bg-black">
       <div className="flex flex-col md:pt-8 pt-4">
         <div className="text-[#1276e0]  flex justify-between pl-6 pr-6">
-          <span className="font-bold md:text-lg text-md ">Accounts</span>
+          <span className="font-bold md:text-lg text-md  min-[2560px]:text-2xl">
+            Accounts
+          </span>
           {/*using framer motion animation libray */}
           <ScrollFuncion />
-          <span className="md:text-sm font-bold flex-shrink-0 ">
+          <span className="md:text-sm  min-[2560px]:text-xl font-bold flex-shrink-0 ">
             4 accounts
           </span>
         </div>
 
-        <div className="flex gap-4 h-[255px] pl-6  overflow-x-auto  relative  ">
+        <div className="flex gap-4 h-[255px]  min-[2560px]:h-[440px] pl-6  overflow-x-auto  relative  ">
           <div className="absolute flex ">
             <BankCard />
           </div>
         </div>
         <div className="border-b-[0.1px]  border-gray-800 mx-6"></div>
         <div className="text-[#1276e0] flex justify-between py-8 pl-6 pr-6">
-          <span className="font-bold text-lg">Favorite Actions</span>
+          <span className="font-bold  min-[2560px]:text-2xl text-lg">
+            Favorite Actions
+          </span>
 
           <span
-            className="text-sm font-bold underline cursor-pointer"
+            className="text-sm  min-[2560px]:text-xl font-bold underline cursor-pointer"
             onClick={() => setShowFaveIcons2(!showFaveIcons2)}
           >
             {showFaveIcons2 ? "Show less" : "Show more"}
@@ -44,7 +48,9 @@ export default function Home() {
         </div>
         <div className="border-b-[0.1px]  border-gray-800 mx-6"></div>
         <div className="text-[#1276e0] flex  py-6 pl-6 pr-6">
-          <span className="font-bold text-lg">Updates</span>
+          <span className="font-bold  min-[2560px]:text-2xl text-lg">
+            Updates
+          </span>
         </div>
         <div className="hidden  md:grid md:grid-cols-2 md:gap-3 md:px-6 2xl:grid-cols-3    md:pb-10 ">
           <Updates />

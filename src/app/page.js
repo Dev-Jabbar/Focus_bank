@@ -1,21 +1,18 @@
 "use client";
 
-import React from "react";
-import { useSession } from "next-auth/react";
+import React, { useContext, useEffect } from "react";
+
 import { useRouter } from "next/navigation";
 
+import { FocusContext } from "../context/FocusContext";
+
 const RootPage = () => {
-  const session = useSession();
-
   const router = useRouter();
+  const { password, username } = useContext(FocusContext);
 
-  if (session.status === "unauthenticated") {
-    router?.push("/login");
-  }
-
-  if (session.status === "authenticated") {
-    router?.push("/home");
-  }
+  useEffect(() => {
+    !username && !password ? router.push("/initial") : router.push("/initial");
+  }, [password, router, username]);
 
   return <div className="dark:bg-black"></div>;
 };

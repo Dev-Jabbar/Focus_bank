@@ -7,12 +7,12 @@ import Footer from "../../components/footer/Footer";
 export default function HomeLayout({ children }) {
   return (
     <div className=" flex w-screen h-screen overflow-x-hidden overflow-y-hidden ">
-      <div className="w-[280px] bg-black hidden md:block">
+      <div className="w-[280px] min-[2560px]:w-[450px] bg-black hidden md:block">
         <SideNav />
       </div>
 
       <div className=" flex w-full flex-col ">
-        <div className="md:h-[70px] h-[60px] bg-black">
+        <div className="md:h-[70px] h-[60px] min-[2560px]:h-[120px] bg-black">
           <Header />
         </div>
         {children}
