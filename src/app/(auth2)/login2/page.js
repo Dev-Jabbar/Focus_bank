@@ -89,7 +89,7 @@ const LoginPage = () => {
                 <div
                   className={`dark:text-gray-400 text-black flex justify-between mb-1 text-sm font-bold ${
                     !usernameFocused && username.trim() === ""
-                      ? "text-red-500"
+                      ? "text-red-500 dark:text-red-500"
                       : ""
                   }`}
                 >
@@ -105,13 +105,13 @@ const LoginPage = () => {
                   </div>
                 </div>
                 <input
-                  className={`h-10 2xl:h-[50px] min-[2560px]:h-[70px] min-[2560px]:placeholder:text-lg bg-gray-500 w-full border-gray-700 border-[0.05px] rounded-md px-2 placeholder:text-sm  dark:bg-gray-900 dark:text-white ${
+                  className={`h-10 2xl:h-[50px] min-[2560px]:h-[70px] min-[2560px]:placeholder:text-lg bg-gray-500 w-full border-gray-700  border-[0.05px] rounded-md px-2 placeholder:text-sm  dark:bg-gray-900 dark:text-white ${
                     !usernameFocused && username.trim() == ""
-                      ? "focus:border-red-500"
-                      : "focus:border-blue-500"
+                      ? "focus:border-red-500 dark:focus:border-red-500"
+                      : "focus:border-blue-500 dark:focus:border-blue-500"
                   } focus:outline-none dark:text-white text-start ${
                     !usernameFocused && username.trim() === ""
-                      ? "border-red-500"
+                      ? "border-red-500 dark:border-red-500"
                       : ""
                   }`}
                   type="text"
@@ -128,7 +128,7 @@ const LoginPage = () => {
                 <div
                   className={`dark:text-gray-400 text-black flex justify-between mb-1 2xl:mb-3 text-sm font-bold ${
                     !passwordFocused && password.trim() === ""
-                      ? "text-red-500"
+                      ? "text-red-500 dark:text-red-500"
                       : ""
                   }`}
                 >
@@ -148,11 +148,11 @@ const LoginPage = () => {
                   <input
                     className={`h-10 2xl:h-[50px] min-[2560px]:h-[70px] min-[2560px]:placeholder:text-lg bg-gray-500 w-full border-gray-700 border-[0.05px] rounded-md px-2 placeholder:text-sm dark:bg-gray-900 dark:text-white ${
                       !passwordFocused && password.trim() == ""
-                        ? "focus:border-red-500"
-                        : "focus:border-blue-500"
+                        ? "focus:border-red-500 dark:focus:border-red-500"
+                        : "focus:border-blue-500 dark:focus:border-blue-500"
                     } focus:outline-none dark:text-white text-start ${
                       !passwordFocused && password.trim() === ""
-                        ? "border-red-500"
+                        ? "border-red-500 dark:border-red-500"
                         : ""
                     }`}
                     type={passwordReveal ? "text" : "password"}
